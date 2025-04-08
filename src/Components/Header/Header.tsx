@@ -1,0 +1,57 @@
+import { useState } from "react";
+import MarqueeText from "../Marquee/MarqueeText";
+import { Link } from "react-router-dom";
+
+const Header: React.FC = () => {
+  const [dropDownOpen, setDropdownOpen] = useState<boolean>(false);
+
+  const instituteDropdown = (): void => {
+    setDropdownOpen(!dropDownOpen)
+  }
+
+  return (
+    <header className="w-full bg-blue-500">
+      <div className="w-full  p-6 text-center">
+        <h1 className="text-white text-3xl font-bold">Welcome to Ims the HUB of Knowledge</h1>
+      </div>
+
+      <div className="w-full  py-2 px-4 text-center">
+        <ul className="flex justify-center space-x-6 text-white text-xl">
+        <li>
+            <Link to="/" className="hover:underline">Home</Link>
+          </li>
+          <li className="relative">
+            <a href="#" className="hover:underline" onClick={instituteDropdown}>
+              Institute
+              <span className={`ml-1  inline-block transition-transform duration-300 ${dropDownOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
+            </a>
+            <ul className={`absolute w-72 ${dropDownOpen ? 'block' : 'hidden'} border bg-blue-500 text-white py-2 px-5 text-[15px] rounded shadow-lg left-[-80px] z-50`}>
+              <li><Link to="/school" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi First School and Collage</Link></li>
+              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi English Language Center</Link></li>
+              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Computer Institute</Link></li>
+              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Tuition Academy</Link></li>
+              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Fast Software House</Link></li>
+            </ul>
+
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Fee Payment</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Online Test</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Form Submission</a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <MarqueeText />
+    </header>
+  );
+};
+
+export default Header;

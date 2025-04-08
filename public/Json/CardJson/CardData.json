@@ -1,0 +1,28 @@
+[
+    {
+      "image": "/public/images/cardImg.jpg",
+      "name": "John Doe",
+      "occupation": "Software Engineer",
+      "description": "John is a skilled developer with 5 years of experience in full-stack development. He loves building scalable web applications."
+    },
+    {
+  "image": "/public/images/cardImg.jpg",      
+  "name": "Sarah Smith",
+      "occupation": "UI/UX Designer",
+      "description": "Sarah designs intuitive and beautiful interfaces. Her passion lies in creating seamless user experiences."
+    },
+    {
+  "image": "/public/images/cardImg.jpg",      
+  "name": "Michael Lee",
+      "occupation": "Data Analyst",
+      "description": "Michael turns complex data into meaningful insights. He's an expert in Python and visualization tools."
+    },
+    {
+      "image": "/public/images/cardImg.jpg",      
+      "name": "Sarah Smith",
+          "occupation": "UI/UX Designer",
+          "description": "Sarah designs intuitive and beautiful interfaces. Her passion lies in creating seamless user experiences."
+        }
+     
+  ]
+  

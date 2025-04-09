@@ -4,6 +4,7 @@ import './App.css'
 import Home from './Pages/Home/Home';
 import School from './Pages/School/School';
 import Language from './Pages/Language/Language';
+import Form from './Components/Form/Form';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/school' element={<School/>} />
           <Route path='/Language' element={<Language/>} />
+          <Route path='/form' element={<Form/>} />
 
 
         </Routes>

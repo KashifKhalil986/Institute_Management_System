@@ -16,7 +16,7 @@ const LanguageCard :React.FC<LanguageProps>= ({level,name,description}) => {
     <p className="text-gray-600 mb-4 text-center">{description}</p>
     
   <Link
-    to="#"
+    to="/form"
     className="text-blue-700 underline underline-offset-2 hover:underline-opacity-100 opacity-75 hover:opacity-100 transition duration-200"
   >
     Apply

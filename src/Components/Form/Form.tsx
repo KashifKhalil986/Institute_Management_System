@@ -1,7 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import Header from "../Header/Header";
-import { useNavigate } from "react-router-dom";
-
+import { useLocation, useNavigate , Location } from "react-router-dom";
 interface FormData {
     name: string;
     email: string;
@@ -20,6 +19,8 @@ interface FormData {
 }
 
 const Form: React.FC = () => {
+  const location:Location = useLocation();
+  console.log("form location" , location.pathname.split("/"));
     const navigate =useNavigate()
   const [next, setNext] = useState<number>(0);
 
@@ -110,7 +111,6 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                     </div>
                   </div>
 
-                  {/* Password & Confirm Password inputs */}
                   <div className="flex flex-col lg:flex-row gap-5 mt-5">
                   <div className="w-full lg:w-[200px]">
                   <label htmlFor="password" className="block text-sm font-medium">
@@ -183,11 +183,11 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                   <div className="w-full flex justify-end gap-2 mt-5">
                     <button type="button" 
                     onClick={()=>navigate(-1)}
-                    className="px-2 py-1 rounded border border-gray-300">
+                    className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Close
                     </button>
 
-                    <button type="submit" className="px-2 py-1 rounded border border-gray-300">
+                    <button type="submit" className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Next
                     </button>
                   </div>
@@ -264,11 +264,11 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                   <div className="w-full flex justify-end gap-2 mt-5">
                     <button type="button" 
                     onClick={()=>navigate(-1)}
-                    className="px-2 py-1 rounded border border-gray-300">
+                    className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Close
                     </button>
 
-                    <button type="submit" className="px-2 py-1 rounded border border-gray-300">
+                    <button type="submit" className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Next
                     </button>
                   </div>
@@ -323,11 +323,11 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
               <div className="w-full flex justify-end gap-2 mt-5">
                     <button type="button" 
                     onClick={()=>navigate(-1)}
-                    className="px-2 py-1 rounded border border-gray-300">
+                    className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Close
                     </button>
 
-                    <button type="submit" className="px-2 py-1 rounded border border-gray-300">
+                    <button type="submit" className="px-2 py-1 rounded border border-gray-500 bg-blue-500 hover:cursor-pointer">
                       Submit
                     </button>
                   </div> 

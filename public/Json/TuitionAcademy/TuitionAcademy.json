@@ -1,0 +1,28 @@
+[
+    {
+      "level": "Level A",
+      "name": "ali",
+      "description": "A beginner passionate about learning the fundamentals of coding.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "Level B",
+      "name": "abbas",
+      "description": "Exploring the world of programming with a focus on clean code.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "Level C",
+      "name": "osama",
+      "description": "Exploring the world of programming with a focus on clean code.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "Level D",
+      "name": "adil",
+      "description": "Creating efficient backend solutions and working with databases.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "Level E",
+      "name": "khan",
+      "description": "Combining frontend and backend to deliver complete web apps.Building interactive websites with frontend technologies"
+    }
+  ]
+  

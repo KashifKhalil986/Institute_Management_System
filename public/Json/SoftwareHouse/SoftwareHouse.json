@@ -1,0 +1,28 @@
+[
+    {
+      "level": "encode bytes",
+      "name": "ali",
+      "description": "A beginner passionate about learning the fundamentals of coding.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "swiss max",
+      "name": "abbas",
+      "description": "Exploring the world of programming with a focus on clean code.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "techenin",
+      "name": "osama",
+      "description": "Exploring the world of programming with a focus on clean code.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "tritech",
+      "name": "adil",
+      "description": "Creating efficient backend solutions and working with databases.Building interactive websites with frontend technologies"
+    },
+    {
+      "level": "soft solution",
+      "name": "khan",
+      "description": "Combining frontend and backend to deliver complete web apps.Building interactive websites with frontend technologies"
+    }
+  ]
+  

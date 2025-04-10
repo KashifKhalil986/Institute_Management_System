@@ -1,6 +1,6 @@
 import Header from "../../Components/Header/Header"
-import LanguageCard from "../../Components/LanguageCard/LanguageCard"
 import LanguageData from "../../../public/Json/Language/Language.json"
+import InstituteCard from "../../../src/Components/InstituteCard/InstituteCard"
 
 const Language :React.FC = () => {
   return (
@@ -9,11 +9,12 @@ const Language :React.FC = () => {
    <div className="flex w-full  p-5 justify-evenly  flex-wrap">
     {LanguageData.map((data,index)=>(
         <div className="" key={index}>
-            <LanguageCard
-            level={data.level}
-            name={data.name}
-            description={data.description}
-            />
+         <InstituteCard
+             level={data.level}
+             name={data.name}
+             description={data.description}
+             />
+         
             
         </div>
     ))}

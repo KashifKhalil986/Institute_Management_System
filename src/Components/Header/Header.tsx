@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [dropDownOpen, setDropdownOpen] = useState<boolean>(false);
+const [academicsOpen,setAcademicsOpen]= useState<boolean>(false);
 
+const academicsDropDown = ():void=>{
+  setAcademicsOpen(!academicsOpen)
+}
   const instituteDropdown = (): void => {
     setDropdownOpen(!dropDownOpen)
   }
 
+
+  
   return (
     <header className="w-full bg-blue-500">
       <div className="w-full  p-6 text-center">
@@ -26,11 +32,26 @@ const Header: React.FC = () => {
               <span className={`ml-1  inline-block transition-transform duration-300 ${dropDownOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
             </a>
             <ul className={`absolute w-72 ${dropDownOpen ? 'block' : 'hidden'} border bg-blue-500 text-white py-2 px-5 text-[15px] rounded shadow-lg left-[-80px] z-50`}>
-              <li><Link to="/school" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi First School and Collage</Link></li>
-              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi English Language Center</Link></li>
-              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Computer Institute</Link></li>
-              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Tuition Academy</Link></li>
-              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Fast Software House</Link></li>
+              <li ><Link to="/school" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi First School and Collage</Link></li>
+              <li data-page="language"><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi English Language Center</Link></li>
+              <li data-page="computerScience"><Link to="/computer-institute" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Computer Institute</Link></li>
+              <li data-page="tuitionAcademy"><Link to="/tuition-academy" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Tuition Academy</Link></li>
+              <li data-page="softwareHouse"><Link to="/software-house" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Fast Software House</Link></li>
+            </ul>
+
+          </li>
+
+          <li className="relative">
+            <a href="#" className="hover:underline" onClick={academicsDropDown}>
+            Academics
+              <span className={`ml-1  inline-block transition-transform duration-300 ${academicsOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
+            </a>
+            <ul className={`absolute w-72 ${academicsOpen ? 'block' : 'hidden'} border bg-blue-500 text-white py-2 px-5 text-[15px] rounded shadow-lg left-[-80px] z-50`}>
+              <li><Link to="/school" className="block py-1 hover:bg-blue-600 cursor-pointer">Director and Principal Message</Link></li>
+              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Courses/Services</Link></li>
+              <li><Link to="/computer-institute" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Computer Institute</Link></li>
+              <li><Link to="/tuition-academy" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Tuition Academy</Link></li>
+              <li><Link to="/software-house" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Fast Software House</Link></li>
             </ul>
 
           </li>

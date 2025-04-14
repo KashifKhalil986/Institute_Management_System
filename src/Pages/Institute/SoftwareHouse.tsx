@@ -6,10 +6,11 @@ const SoftwareHouse:React.FC = () => {
     return (
      <>
      <Header/>
-     <div className="flex w-full  p-5 justify-evenly  flex-wrap">
-      {ShData.map((data,index)=>(
+     <div className="flex w-full lg:w-[1200px] p-5 gap-2  mx-auto mt-5 flex-wrap ">
+     {ShData.map((data,index)=>(
           <div className="" key={index}>
            <InstituteCard
+           institute="Software House"
                level={data.level}
                name={data.name}
                description={data.description}

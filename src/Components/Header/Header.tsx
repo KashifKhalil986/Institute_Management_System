@@ -26,6 +26,9 @@ const academicsDropDown = ():void=>{
         <li>
             <Link to="/" className="hover:underline">Home</Link>
           </li>
+          <li>
+            <a href="/about" className="hover:underline">About</a>
+          </li>
           <li className="relative">
             <a href="#" className="hover:underline" onClick={instituteDropdown}>
               Institute
@@ -47,25 +50,23 @@ const academicsDropDown = ():void=>{
               <span className={`ml-1  inline-block transition-transform duration-300 ${academicsOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
             </a>
             <ul className={`absolute w-72 ${academicsOpen ? 'block' : 'hidden'} border bg-blue-500 text-white py-2 px-5 text-[15px] rounded shadow-lg left-[-80px] z-50`}>
-              <li><Link to="/school" className="block py-1 hover:bg-blue-600 cursor-pointer">Director and Principal Message</Link></li>
-              <li><Link to="/language" className="block py-1 hover:bg-blue-600 cursor-pointer">Courses/Services</Link></li>
-              <li><Link to="/computer-institute" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Computer Institute</Link></li>
-              <li><Link to="/tuition-academy" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Tuition Academy</Link></li>
-              <li><Link to="/software-house" className="block py-1 hover:bg-blue-600 cursor-pointer">Farabi Fast Software House</Link></li>
+              <li><Link to="/director&principle-message" className="block py-1 hover:bg-blue-600 cursor-pointer">Director and Principal Message</Link></li>
+              <li><Link to="/courses" className="block py-1 hover:bg-blue-600 cursor-pointer">Courses/Services</Link></li>
+              <li><Link to="/teaching-staff" className="block py-1 hover:bg-blue-600 cursor-pointer">Teaching Staff</Link></li>
             </ul>
 
           </li>
           <li>
-            <a href="#" className="hover:underline">Fee Payment</a>
+            <a href="/fee-form" className="hover:underline">Fee Payment</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#" className="hover:underline">Online Test</a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href="#" className="hover:underline">Form Submission</a>
-          </li>
+          </li> */}
           <li>
-            <a href="#" className="hover:underline">Contact</a>
+            <a href="/contact" className="hover:underline">Contact</a>
           </li>
         </ul>
       </div>

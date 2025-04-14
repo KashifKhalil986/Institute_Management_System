@@ -6,10 +6,11 @@ const TuitionAcademy:React.FC = () => {
     return (
      <>
      <Header/>
-     <div className="flex w-full  p-5 justify-evenly  flex-wrap">
-      {TaData.map((data,index)=>(
+     <div className="flex w-full lg:w-[1200px] p-5 gap-2  mx-auto mt-5 flex-wrap ">
+     {TaData.map((data,index)=>(
           <div className="" key={index}>
            <InstituteCard
+           institute="Tuition Academy"
                level={data.level}
                name={data.name}
                description={data.description}

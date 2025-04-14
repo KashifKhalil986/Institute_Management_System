@@ -10,7 +10,7 @@ type InstituteProps = {
 
 const InstituteCard: React.FC<InstituteProps> = ({ level, name, description,institute }) => {
   // const location: Location = useLocation();
-  console.log("location",location)
+  // console.log("location",location)
 
   return (
     <div>
@@ -25,6 +25,7 @@ const InstituteCard: React.FC<InstituteProps> = ({ level, name, description,inst
             // to={`${location?.pathname}/${level}/form`}
             to={`/form`}
             className="text-blue-700 underline underline-offset-2 hover:underline-opacity-100 opacity-75 hover:opacity-100 transition duration-200"
+          state={{institute,level}}
           >
             Apply
           </Link>

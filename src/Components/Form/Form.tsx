@@ -13,14 +13,17 @@ interface FormData {
     post: string;
     qualification: string;
     subjects:string[];
-    shift:string;
+    shift:string; 
 
   
 }
 
 const Form: React.FC = () => {
+  
   const location:Location = useLocation();
-  console.log("form location" , location.pathname.split("/"));
+  const institute =location.state || {};
+  const level =location.state || {};
+  console.log("form location" , location);
     const navigate =useNavigate()
   const [next, setNext] = useState<number>(0);
 
@@ -71,7 +74,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       <Header />
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col items-center mx-auto  h-screen">
-          <h2 className="text-2xl font-bold mt-5 text-center">User Registration</h2>
+          <h2 className="text-xl font-bold mt-5 text-center">Applied for {level.level} in {institute.institute}</h2>
           <div>
             {next === 0 ? (
               <>
@@ -90,7 +93,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         onChange={handleChange}
                         className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
                         placeholder="Enter your name"
-                        
+                        required
                       />
                     </div>
 
@@ -106,7 +109,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         onChange={handleChange}
                         className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
                         placeholder="Enter email address"
-                        
+                        required
                       />
                     </div>
                   </div>

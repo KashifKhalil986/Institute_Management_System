@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Alan Turing",
+      "occupation": "Mathematician",
+      "image": "/public/images/cardImg.jpg",
+      "description": "Known as the father of modern computer science, Turing made foundational contributions to algorithms and computing."
+    },
+    {
+      "id": 2,
+      "name": "Dr. Marie Curie",
+      "occupation": "Physicist",
+      "image": "/public/images/cardImg.jpg",
+      "description": "Pioneered research on radioactivity, becoming the first woman to win a Nobel Prize and the only person to win in two sciences."
+    },
+    {
+      "id": 3,
+      "name": "Dr. Richard Feynman",
+      "occupation": " Physicist",
+      "image": "/public/images/cardImg.jpg",
+      "description": "Celebrated for his work in quantum mechanics and particle physics, as well as his engaging teaching style."
+    },
+    {
+      "id": 4,
+      "name": "Dr. Katherine Johnson",
+      "occupation": "Mathematician",
+      "image": "/public/images/cardImg.jpg",
+      "description": "Her calculations were critical to NASA's space missions, breaking both racial and gender barriers in STEM."
+    },
+    {
+      "id": 5,
+      "name": "Dr. Stephen Hawking",
+      "occupation": "Cosmologist",
+      "image": "/public/images/cardImg.jpg",
+      "description": "Renowned for his work on black holes and relativity, and his bestselling book 'A Brief History of Time'."
+    }
+  ]
+  

@@ -30,7 +30,7 @@ const academicsDropDown = ():void=>{
             <a href="/about" className="hover:underline">About</a>
           </li>
           <li className="relative">
-            <a href="#" className="hover:underline" onClick={instituteDropdown}>
+            <a  className="hover:underline" onClick={instituteDropdown}>
               Institute
               <span className={`ml-1  inline-block transition-transform duration-300 ${dropDownOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
             </a>
@@ -45,7 +45,7 @@ const academicsDropDown = ():void=>{
           </li>
 
           <li className="relative">
-            <a href="#" className="hover:underline" onClick={academicsDropDown}>
+            <a className="hover:underline" onClick={academicsDropDown}>
             Academics
               <span className={`ml-1  inline-block transition-transform duration-300 ${academicsOpen ? 'rotate-180' : 'rotate-0'}`}>^</span>
             </a>

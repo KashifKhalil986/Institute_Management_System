@@ -48,22 +48,25 @@ setNext((prevNext)=>prevNext+1)
 }
 
 const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    const { name, value, type, checked } = e.target;
+  const { name, value, type, checked } = e.target;
 
-    if (type === "radio") {
-        setFormData({ ...formData, [name]: value });
-    }
+  if (type === "checkbox") {
+    setFormData((prevState) => {
+      const updatedSubjects = checked
+        ? [...prevState.subjects, value]
+        : prevState.subjects.filter((subject) => subject !== value);
 
-    if (type === "checkbox") {
-        setFormData((prevState) => {
-            const updatedSubjects = checked
-                ? [...prevState.subjects, value]
-                : prevState.subjects.filter((subject) => subject !== value);
-
-            return { ...prevState, subjects: updatedSubjects };
-        });
-    }
+      return { ...prevState, subjects: updatedSubjects };
+    });
+  } else {
+    // Handles text, email, password, number, etc.
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
 };
+
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
@@ -80,7 +83,38 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
               <>
                 <form onSubmit={handleNext} className="mt-5 shadow-lg rounded-lg p-6 w-full lg:w-[450px] border border-gray-300">
                   
-                  <div className="flex flex-col lg:flex-row gap-5">
+                <div className="flex flex-col lg:flex-row gap-5">
+                    <div className="w-full lg:w-[200px]">
+                      <label htmlFor="name" className="block text-sm font-medium">
+                        Institute 
+                      </label>
+                      <input
+                        type="text"
+                        name="institute"
+                        id="institute"
+                        value={institute.institute}
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none bg-gray-200"
+                        placeholder="Institute"
+                        disabled
+                      />
+                    </div>
+
+                    <div className="w-full lg:w-[180px]">
+                      <label htmlFor="email" className="block text-sm font-medium">
+                        Level 
+                      </label>
+                      <input
+                        type="text"
+                        name="level"
+                        id="level"
+                        value={level.level}
+                        className="w-full mt-2 px-2 py-1 border rounded-md bg-gray-200"
+                        placeholder="Level"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col lg:flex-row gap-5 mt-5">
                     <div className="w-full lg:w-[200px]">
                       <label htmlFor="name" className="block text-sm font-medium">
                         Name <span className="text-red-500">*</span>
@@ -91,7 +125,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter your name"
                         required
                       />
@@ -107,7 +142,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter email address"
                         required
                       />
@@ -125,7 +161,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="password"
                         value={formData.password}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter password"
                         
                       />
@@ -141,7 +178,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="confirmPassword"
                         value={formData.confirmPassword}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Confirm password"
                         
                       />
@@ -159,7 +197,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="cnic"
                         value={formData.cnic}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter CNIC"
                       />
                     </div>
@@ -173,7 +212,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="age"
                         value={formData.age}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter age"
                       />
                     </div>
@@ -212,7 +252,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="address"
                         value={formData.address}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter address"
                       />
                     </div>
@@ -227,7 +268,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="phoneNo"
                         value={formData.phoneNo}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter phone number"
                       />
                     </div>
@@ -244,7 +286,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="subjects"
                         value={formData.subjects}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter subjects"
                       />
                     </div>
@@ -259,7 +302,8 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
                         id="qualification"
                         value={formData.qualification}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter qualification"
                       />
                     </div>

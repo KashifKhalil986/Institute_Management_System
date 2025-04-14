@@ -51,7 +51,8 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>):Promise<void> =>{
                         id="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter your name"
                         
                       />
@@ -67,7 +68,8 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>):Promise<void> =>{
                         id="email"
                      value={formData.email}
                      onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter email address"
                         
                       />
@@ -87,7 +89,8 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>):Promise<void> =>{
                         id="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter Phone Number"
                       />
                     </div>
@@ -100,7 +103,8 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>):Promise<void> =>{
                         name="address"
                         id="address"
                         onChange={handleChange}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter address"
                       />
                     </div>
@@ -117,7 +121,8 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>):Promise<void> =>{
                       value={formData.message}
                       onChange={handleChange}
                       rows={2}
-                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                         placeholder="Enter Message"
                       />
                     </div>

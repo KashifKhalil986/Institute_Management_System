@@ -55,8 +55,40 @@ const CoursesForm: React.FC = () => {
                     <div>
 
                         <form onSubmit={handleSubmit} className="mt-5 shadow-lg rounded-lg p-6 w-full lg:w-[450px] border border-gray-300">
-
+                        
                             <div className="flex flex-col lg:flex-row gap-5">
+                    <div className="w-full lg:w-[200px]">
+                      <label htmlFor="name" className="block text-sm font-medium">
+                      Course Name 
+                      </label>
+                      <input
+                        type="text"
+                        name="institute"
+                        id="institute"
+                        value={courseName}
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none bg-gray-200"
+                        placeholder="Institute"
+                        disabled
+                      />
+                    </div>
+
+                    {/* <div className="w-full lg:w-[180px]">
+                      <label htmlFor="email" className="block text-sm font-medium">
+                        Level 
+                      </label>
+                      <input
+                        type="text"
+                        name="level"
+                        id="level"
+                        value={level.level}
+                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
+                        placeholder="Level"
+                      />
+                    </div> */}
+                  </div>
+
+                            <div className="flex flex-col lg:flex-row gap-5 mt-5">
                                 <div className="w-full lg:w-[200px]">
                                     <label htmlFor="name" className="block text-sm font-medium">
                                         Name <span className="text-red-500">*</span>
@@ -67,7 +99,8 @@ const CoursesForm: React.FC = () => {
                                         id="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter your name"
                                         required
                                     />
@@ -83,7 +116,8 @@ const CoursesForm: React.FC = () => {
                                         id="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter email address"
                                         required
                                     />
@@ -101,7 +135,8 @@ const CoursesForm: React.FC = () => {
                                         id="password"
                                         value={formData.password}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter password"
 
                                     />
@@ -117,7 +152,8 @@ const CoursesForm: React.FC = () => {
                                         id="confirmPassword"
                                         value={formData.confirmPassword}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Confirm password"
 
                                     />
@@ -135,7 +171,8 @@ const CoursesForm: React.FC = () => {
                                         id="cnic"
                                         value={formData.cnic}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter CNIC"
                                     />
                                 </div>
@@ -149,7 +186,8 @@ const CoursesForm: React.FC = () => {
                                         id="age"
                                         value={formData.age}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter age"
                                     />
                                 </div>
@@ -169,7 +207,8 @@ const CoursesForm: React.FC = () => {
                                         id="address"
                                         value={formData.address}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter address"
                                     />
                                 </div>
@@ -184,7 +223,8 @@ const CoursesForm: React.FC = () => {
                                         id="phoneNo"
                                         value={formData.phoneNo}
                                         onChange={handleChange}
-                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#013D29]"
+                                        className="w-full mt-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200
+"
                                         placeholder="Enter phone number"
                                     />
                                 </div>
